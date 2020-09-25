@@ -9,8 +9,8 @@
   * https://github.com/ghassannasr/perscholas.case-study-backend
   * The two applications were deployed to an AWS EC2 instance. 
   * The React Blog front-end application is running at: http://3.22.118.142:3000/blog/current
-  * The Spring MVC back-end is running at http://3.22.118.142:8080
-  * Currently the h2 console is not accessible on AWS (there is a property that needs to be enables in application.properties that I could not figure out yet).
+  * The Spring MVC back-end is running at http://3.22.118.142:8080 (additional path information needs to be appended to access the API)
+  * Currently the h2 console is not accessible on AWS (there is a property that needs to be enabled in application.properties that I could not figure out yet).
 
 
 * **Additional Resources**
