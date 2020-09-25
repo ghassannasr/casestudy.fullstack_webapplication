@@ -3,9 +3,16 @@
 * **Objective** - to create an implementation of a web service
 * **Purpose** - to demonstrate the construction of a full-stacked web-application
 * **Description**
-	* This Case Study is your first foray into building a full-stack application. You'll be building a Spring MVC based application, which means you'll learn about what it takes to build a functional application from the ground up yourself.
-	* This is exciting! It's a lot, but we've given you the tools to be able to build what you need, and you get to decide what you do with it. You also get to be creative in choosing what sort of application you want to build!
-	* You will be working individually to design your app. We hope you'll exercise creativity on this project, sketch some wireframes before you start, make sure you have time to run these ideas by your instructors to get their feedback before you dive too deep into coding! Remember to keep things small and focus on mastering the fundamentals.
+	* This Case Study is a full-stack single-author blog application using a React.js front-end and a Spring MVC backend "microservice" that in turn connects to a MySQL database.
+  * This repository DOES NOT represent the code repositories. Rather, it is an entrypoint for two code repositories, one for the front-end application, and the other for the back-end application.
+  * https://github.com/ghassannasr/perscholas.case-study-frontend
+  * https://github.com/ghassannasr/perscholas.case-study-backend
+  * The two applications were deployed to an AWS EC2 instance. 
+  * The React Blog front-end application is running at: http://3.22.118.142:3000/blog/current
+  * The Spring MVC back-end is running at http://3.22.118.142:8080
+  * Currently the h2 console is not accessible on AWS (there is a property that needs to be enables in application.properties that I could not figure out yet).
+
+
 * **Additional Resources**
 	* [The Original Case Study Document](./case-study.pdf)
 	* [Case Study Outline](./case-study-outline.pdf)
