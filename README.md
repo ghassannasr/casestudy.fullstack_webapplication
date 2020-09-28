@@ -15,7 +15,7 @@
 
 * Spring Boot Project Deployment GIF:
 
-    ![SpringBootDeployRun](./README_attachments/SpringBootDeployRun.gif)
+    ![SpringBootDeployRun](./README_attachments/SpringBootDeployRun5.gif)
 
 ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 * **Additional Resources**
