@@ -5,14 +5,19 @@
 * **Description**
 	* This Case Study is a full-stack single-author blog application using a React.js front-end and a Spring MVC backend "microservice" that in turn connects to a MySQL database.
   * This repository DOES NOT represent the code repositories. Rather, it is an entrypoint for two code repositories, one for the front-end application, and the other for the back-end application.
-  * https://github.com/ghassannasr/perscholas.case-study-frontend
-  * https://github.com/ghassannasr/perscholas.case-study-backend
+  ** https://github.com/ghassannasr/perscholas.case-study-frontend
+  ** https://github.com/ghassannasr/perscholas.case-study-backend
   * The two applications were deployed to an AWS EC2 instance. 
-  * The React Blog front-end application is running at: http://3.22.118.142:3000/blog/current
-  * The Spring MVC back-end is running at http://3.22.118.142:8080 (additional path information needs to be appended to access the API)
+  * The React Blog front-end application is running at: http://3.12.93.254:3000/blog/current
+  * The Spring MVC back-end is running at http://3.12.93.254:8080 (additional path information needs to be appended to access the API)
   * Currently the h2 console is not accessible on AWS (there is a property that needs to be enabled in application.properties that I could not figure out yet).
 
 
+* Spring Boot Project Deployment GIF:
+
+    ![SpringBootDeployRun](./README_attachments/SpringBootDeployRun.gif)
+
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 * **Additional Resources**
 	* [The Original Case Study Document](./case-study.pdf)
 	* [Case Study Outline](./case-study-outline.pdf)
