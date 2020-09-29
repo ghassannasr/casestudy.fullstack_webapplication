@@ -17,7 +17,11 @@
 
     ![SpringBootDeployRun](./README_attachments/SpringBootDeployRun6.gif)
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+* Spring Boot Project Deployment GIF:
+
+    ![SpringBootDeployRun](./README_attachments/ReactDeployRun.gif)
+
+
 * **Additional Resources**
 	* [The Original Case Study Document](./case-study.pdf)
 	* [Case Study Outline](./case-study-outline.pdf)
