@@ -36,7 +36,7 @@
 
 ### Tech Stack Selection
   * **Version Control System**
-    1. Github
+    * Github
     
   * **Frontend**
     * React (created with create-react-app for boilerplate)
@@ -62,20 +62,20 @@
         * Executable jar plugin
     
   * **Business Logic**
-    1. Java 1.8 (back-end)
+    * Java 1.8 (back-end)
       * IDE: IntelliJ Community Edition
-    2. JavaScript ES6 (front-end) 
+    * JavaScript ES6 (front-end) 
       * IDE: Visual Studio Code with ESLint
 
   * **WebServer Implementation**
-    1. Spring Boot (internally uses )
+    * Spring Boot (internally uses )
 
   * **Data Layer**
-    1. MySQL/MariaDB
-    2. H2 database and console
+    * MySQL/MariaDB
+    * H2 database and console
   
   * **Web Application Cloud Deployment**
-    1. AWS EC2 Instance:
+    * AWS EC2 Instance:
       * Amazon Linux AMI, an EBS-backed, AWS-supported image. The default image includes AWS command line tools, Python, Ruby, Perl, and Java. The repositories include Docker, PHP, MySQL, PostgreSQL, and other packages.
       * I installed Node.js (using nvm).
 
