@@ -31,15 +31,6 @@
     ![](./README_attachments/ReactDeployRun.gif)
 
 
-
-
-* **Technical Specifications**
-	
-  * React Front End:
-    * Created with create-react-app
-    * 
-
-
 ## Developmental Notes
 
 ### Tech Stack Selection
