@@ -10,6 +10,7 @@
     * https://github.com/ghassannasr/perscholas.case-study-backend
   * The two applications were deployed to an AWS EC2 instance. 
   * The React Blog front-end application is running at: http://3.12.93.254:3000/blog/current
+    * To log in: username "lorem" and password "ipsum"
   * The Spring MVC back-end is running at http://3.12.93.254:8080 (additional path information needs to be appended to access the API)
   * The h2 console is not accessible on AWS (for security reasons).
 
