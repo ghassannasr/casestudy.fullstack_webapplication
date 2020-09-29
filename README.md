@@ -10,16 +10,20 @@
   * The two applications were deployed to an AWS EC2 instance. 
   * The React Blog front-end application is running at: http://3.12.93.254:3000/blog/current
   * The Spring MVC back-end is running at http://3.12.93.254:8080 (additional path information needs to be appended to access the API)
-  * Currently the h2 console is not accessible on AWS (there is a property that needs to be enabled in application.properties that I could not figure out yet).
+  * The h2 console is not accessible on AWS (there is a property that needs to be enabled in application.properties that I could not figure out yet).
 
 
 * Spring Boot Project Deployment GIF:
 
-    ![SpringBootDeployRun](./README_attachments/SpringBootDeployRun6.gif)
+    ![](./README_attachments/SpringBootDeployRun6.gif)
 
-* Spring Boot Project Deployment GIF:
+* React Blog App Deployment GIF:
 
-    ![SpringBootDeployRun](./README_attachments/ReactDeployRun.gif)
+    ![](./README_attachments/ReactDeployRun.gif)
+
+* Blog App Sample Usage GIF:
+
+    ![](./README_attachments/BlogAppUsage.gif)
 
 
 * **Additional Resources**
