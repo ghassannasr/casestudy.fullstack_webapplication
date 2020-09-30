@@ -1,4 +1,4 @@
-# Full Stack Web Application
+# Full Stack Web Application -- Case Study for Per Scholas, September, 2020 -- Ghassan Nasr
 
 ## Introduction
 * **Objective** - to create an implementation of a web service
