@@ -5,17 +5,17 @@
 * **Purpose** - to demonstrate the construction of a full-stacked web-application
 * **Description**
 	* This Case Study is a full-stack single-author blog application using a React.js front-end and a Spring MVC backend "microservice" that in turn connects to a MySQL database.
-  * This repository DOES NOT represent the code repositories. Rather, it is an entrypoint for two code repositories, one for the front-end application, and the other for the back-end application.
+  * This repository DOES NOT represent the code repositories. Rather, it is an entrypoint for two code repositories, one for the frontend application, and the other for the backend application.
     * https://github.com/ghassannasr/perscholas.case-study-frontend
     * https://github.com/ghassannasr/perscholas.case-study-backend
   * The two applications were deployed to an AWS EC2 instance. 
   * The React Blog front-end application is running at: http://3.12.93.254:3000/blog/current
-    * To log in: username "lorem" and password "ipsum"
-  * The Spring MVC back-end is running at http://3.12.93.254:8080 (additional path information needs to be appended to access the API)
+    * To log in, enter username "lorem" and password "ipsum"
+  * The Spring MVC backend is running at http://3.12.93.254:8080 (additional path information needs to be appended to access the API)
   * The h2 console is not accessible on AWS (for security reasons).
 
 
-## Overview (GIF Animations) of Usage & Deployment
+## Usage and Deployment Overview (GIF Animations)
 
 * **Blog App Sample Usage GIF**
 
@@ -31,12 +31,33 @@
 
     ![](./README_attachments/ReactDeployRun.gif)
 
+## Usage Notes and Application Architecture and Data Model
+
+* The data model provided by the Spring MVC backend is based on two entities (or tables in a relational database):
+ * BlogPost entity with fields id, title, body, date (of post creation) and author. The "author" field is a foreign key to the blog post's author, of which there can only be one. 
+ * Author entity with fields id, firstname, lastname, type, username, password. The "type" field identifies as either an "admin" or regular "user". The former has privileges for creating, editing, and deleting blog posts, while the latter can only read existing posts.
+ * Author is thus in a one-to-many relationship with BlogPost.
+ * Note: The data relationships/tables are not in proper normal form. In a noramlized database or entity relationship, there would be a third table/entity representing an Account. An Account would contain the username and password fields of Author, and a foreign key to the Account's owner (which would be an Author). An Author could in principle have more than one Account. For reasons of simplicity, the Account and Author information are merged into a single table/entity.
+* The backend Spring Boot MVC exposes endpoints for two RESTful APIs, one for the BlogPost entity/model, and one for the Author entity/model. The endpoints (as paths appended to the URI) are:
+ * /blogposts/get-all-posts: GET request that retrieves all blog posts
+ * /blogposts/get-post/{id}: GET request that retrieves a blog post with a given id
+ * /blogposts/create-post: POST request that creates a blog post per the request body JSON sent in the HTTP request header, of the form {id: , title: , body: , date: , author: }
+ * /blogposts/delete-blogpost/{id}: DELETE request that deletes the blog post with the given id
+ * /blogposts/update-blogpost/{id}: PUT request that updates the blogpost with the given id based on the blog fields attached as a JSON in the HTTP request body header
+ * /authors/get-all-authors: GET request that retrieves all blog post authors
+ * /blogposts/get-author/{id}: GET request that retrieves an author with a given id
+ * /blogposts/create-author: POST request that creates an author per the request body sent in the HTTP request header, of the form {id: , firstname: , lastname: , type: , username: , password: }
+ * /blogposts/delete-author/{id}: DELETE request that deletes the author with the given id
+ * /blogposts/update-author/{id}: PUT request that updates the author with the given id based on the author fields attached as a JSON in the HTTP request body header
+
+
+
 
 ## Developmental Notes
 
 ### Tech Stack Selection
   * **Version Control System**
-    * Github
+    * GitHub
     
   * **Frontend**
     * React (created with create-react-app for boilerplate)
@@ -51,12 +72,12 @@
   * Spring Boot Back-end
     * Created with Spring Initialzr (https://start.spring.io/):
       * Java 1.8
-      * Maven Project
+      * Maven project
       * Spring Boot 2.3.4
       * Packaging: Jar
       * Added dependencies:
-        * Spring Web (??)
-        * Spring Data Jpa (??)
+        * Spring Web
+        * Spring Data Jpa
       * Added Mavem configuration/dependencies:
         * MySQL
         * Executable jar plugin
@@ -68,7 +89,7 @@
       * IDE: Visual Studio Code with ESLint
 
   * **WebServer Implementation**
-    * Spring Boot (internally uses )
+    * Spring Boot (internally uses Apache Webserver)
 
   * **Data Layer**
     * MySQL/MariaDB
@@ -77,13 +98,21 @@
   * **Web Application Cloud Deployment**
     * AWS EC2 Instance:
       * Amazon Linux AMI, an EBS-backed, AWS-supported image. The default image includes AWS command line tools, Python, Ruby, Perl, and Java. The repositories include Docker, PHP, MySQL, PostgreSQL, and other packages.
-      * In addition what comes with the AWS Linux AMI, Node.js (using nvm) is required.
+      * Node.js (using nvm) was added.
+      * Java was updated from the default 1.7 to 1.8
 
 ## Installation/Deployment
 
 ### Local Installation
 * Frontend Installation using a GitHub clone of https://github.com/ghassannasr/perscholas.case-study-frontend
+ * Clone the GitHub repository
+ * Install the application using > npm install (or yarn install). This will install all the node modules as per the dependencies specified in package.json.
+ * The appropriate IP address and port should be set in the file constants.js (for access to the backend API). For a local installation, the IP shoud be set to "localhost". The port should be set to 8080, which is the default used by the backend application. 
+
 * Backedn Installation using a GitHub clone of https://github.com/ghassannasr/perscholas.case-study-backend
+ * Clone the GitHub repository
+ * Run the Java the applicaton throught main entrypoint class as a Maven project. In most IDEs, there will be an option to open the project via the pom.xml files, which is the sound way to open the project.
+ * The only configurable is the @CrossOrigin annotation in both the Author API controller and BlogPost API controller. The @CrossOrigin annotation contains the IP address and port on which the frontend is running. For local installation, the IP should be "localhost", and the port should be 3000, which is the default port for a React application.
 
 ### AWS Remote Installation/Deployment
 * Remote deployment to AWS is detailed above in the deployment GIFs. Here are the steps:
@@ -119,6 +148,16 @@
 * Cloud9:
 
 ## Sources Used/Consulted
+
+There were many resources and tutorials I consulted for this project, not the least of which is my instructor Leon Hunter and his excellent introduction to Spring MVC architecture (in terms of conceptualizing repositories, services, models, and controllers). His introduction made much simpler to both understand and build on the boilerplate code generation by the Spring Initializr (mentioned above). In addition to the many sources I used, these listed sources below I used more directly, either as skeleton code or CSS styling that I adapted, or as textual content that I used verbatim as blog post filler:
+
 * The blog post content is taken directly from two sources (verbatim):
-  * 
+  * The Star Trek "Riker Ipsum" blog post content came from here:
+   * https://www.mentalfloss.com/article/61003/10-funnier-alternatives-lorem-ipsum
+  * The content of the other blog posts came from here: 
+   *https://www.lipsum.com/
+* "How to Use React Bootstrap with Redux" by Guarav Singhal (from Pluralsight)
+ * This tutorial guide was my first introduction to Redux and React Bootstrap, and conveniently implemented a login feature as an example of using both (by maintaining the login information in the Redux store)
+* I used this sample Bootstrap blog for blog presentation and styling: 
+ * https://getbootstrap.com/docs/3.4/examples/blog/
 
