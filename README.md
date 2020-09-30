@@ -39,16 +39,16 @@
  * Author is thus in a one-to-many relationship with BlogPost.
  * Note: The data relationships/tables are not in proper normal form. In a noramlized database or entity relationship, there would be a third table/entity representing an Account. An Account would contain the username and password fields of Author, and a foreign key to the Account's owner (which would be an Author). An Author could in principle have more than one Account. For reasons of simplicity, the Account and Author information are merged into a single table/entity.
 * The backend Spring Boot MVC exposes endpoints for two RESTful APIs, one for the BlogPost entity/model, and one for the Author entity/model. The endpoints (as paths appended to the URI) are:
- * /blogposts/get-all-posts: GET request that retrieves all blog posts
- * /blogposts/get-post/{id}: GET request that retrieves a blog post with a given id
- * /blogposts/create-post: POST request that creates a blog post per the request body JSON sent in the HTTP request header, of the form {id: , title: , body: , date: , author: }
- * /blogposts/delete-blogpost/{id}: DELETE request that deletes the blog post with the given id
- * /blogposts/update-blogpost/{id}: PUT request that updates the blogpost with the given id based on the blog fields attached as a JSON in the HTTP request body header
- * /authors/get-all-authors: GET request that retrieves all blog post authors
- * /blogposts/get-author/{id}: GET request that retrieves an author with a given id
- * /blogposts/create-author: POST request that creates an author per the request body sent in the HTTP request header, of the form {id: , firstname: , lastname: , type: , username: , password: }
- * /blogposts/delete-author/{id}: DELETE request that deletes the author with the given id
- * /blogposts/update-author/{id}: PUT request that updates the author with the given id based on the author fields attached as a JSON in the HTTP request body header
+  * /blogposts/get-all-posts: GET request that retrieves all blog posts
+  * /blogposts/get-post/{id}: GET request that retrieves a blog post with a given id
+  * /blogposts/create-post: POST request that creates a blog post per the request body JSON sent in the HTTP request header, of the form {id: , title: , body: , date: , author: }
+  * /blogposts/delete-blogpost/{id}: DELETE request that deletes the blog post with the given id
+  * /blogposts/update-blogpost/{id}: PUT request that updates the blogpost with the given id based on the blog fields attached as a JSON in the HTTP request body header
+  * /authors/get-all-authors: GET request that retrieves all blog post authors
+  * /blogposts/get-author/{id}: GET request that retrieves an author with a given id
+  * /blogposts/create-author: POST request that creates an author per the request body sent in the HTTP request header, of the form {id: , firstname: , lastname: , type: , username: , password: }
+  * /blogposts/delete-author/{id}: DELETE request that deletes the author with the given id
+  * /blogposts/update-author/{id}: PUT request that updates the author with the given id based on the author fields attached as a JSON in the HTTP request body header
 
 
 
