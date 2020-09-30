@@ -153,11 +153,11 @@ There were many resources and tutorials I consulted for this project, not the le
 
 * The blog post content is taken directly from two sources (verbatim):
   * The Star Trek "Riker Ipsum" blog post content came from here:
-   * https://www.mentalfloss.com/article/61003/10-funnier-alternatives-lorem-ipsum
+    * https://www.mentalfloss.com/article/61003/10-funnier-alternatives-lorem-ipsum
   * The content of the other blog posts came from here: 
-   *https://www.lipsum.com/
+    * https://www.lipsum.com/
 * "How to Use React Bootstrap with Redux" by Guarav Singhal (from Pluralsight)
- * This tutorial guide was my first introduction to Redux and React Bootstrap, and conveniently implemented a login feature as an example of using both (by maintaining the login information in the Redux store)
+  * This tutorial guide was my first introduction to Redux and React Bootstrap, and conveniently implemented a login feature as an example of using both (by maintaining the login information in the Redux store)
 * I used this sample Bootstrap blog for blog presentation and styling: 
- * https://getbootstrap.com/docs/3.4/examples/blog/
+  * https://getbootstrap.com/docs/3.4/examples/blog/
 
