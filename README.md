@@ -34,8 +34,8 @@
 ## Usage Notes and Application Architecture and Data Model
 
 * The data model provided by the Spring MVC backend is based on two entities (or tables in a relational database):
- * BlogPost entity with fields id, title, body, date (of post creation) and author. The "author" field is a foreign key to the blog post's author, of which there can only be one. 
- * Author entity with fields id, firstname, lastname, type, username, password. The "type" field identifies as either an "admin" or regular "user". The former has privileges for creating, editing, and deleting blog posts, while the latter can only read existing posts.
+  * BlogPost entity with fields id, title, body, date (of post creation) and author. The "author" field is a foreign key to the blog post's author, of which there can only be one. 
+  * Author entity with fields id, firstname, lastname, type, username, password. The "type" field identifies as either an "admin" or regular "user". The former has privileges for creating, editing, and deleting blog posts, while the latter can only read existing posts.
  * Author is thus in a one-to-many relationship with BlogPost.
  * Note: The data relationships/tables are not in proper normal form. In a noramlized database or entity relationship, there would be a third table/entity representing an Account. An Account would contain the username and password fields of Author, and a foreign key to the Account's owner (which would be an Author). An Author could in principle have more than one Account. For reasons of simplicity, the Account and Author information are merged into a single table/entity.
 * The backend Spring Boot MVC exposes endpoints for two RESTful APIs, one for the BlogPost entity/model, and one for the Author entity/model. The endpoints (as paths appended to the URI) are:
