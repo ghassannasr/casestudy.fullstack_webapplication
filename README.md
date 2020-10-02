@@ -105,14 +105,14 @@
 
 ### Local Installation
 * Frontend Installation using a GitHub clone of https://github.com/ghassannasr/perscholas.case-study-frontend
- * Clone the GitHub repository
- * Install the application using > npm install (or yarn install). This will install all the node modules as per the dependencies specified in package.json.
- * The appropriate IP address and port should be set in the file constants.js (for access to the backend API). For a local installation, the IP shoud be set to "localhost". The port should be set to 8080, which is the default used by the backend application. 
+  * Clone the GitHub repository
+  * Install the application using > npm install (or yarn install). This will install all the node modules as per the dependencies specified in package.json.
+  * The appropriate IP address and port should be set in the file constants.js (for access to the backend API). For a local installation, the IP shoud be set to "localhost". The port should be set to 8080, which is the default used by the backend application. 
 
-* Backedn Installation using a GitHub clone of https://github.com/ghassannasr/perscholas.case-study-backend
- * Clone the GitHub repository
- * Run the Java the applicaton throught main entrypoint class as a Maven project. In most IDEs, there will be an option to open the project via the pom.xml files, which is the sound way to open the project.
- * The only configurable is the @CrossOrigin annotation in both the Author API controller and BlogPost API controller. The @CrossOrigin annotation contains the IP address and port on which the frontend is running. For local installation, the IP should be "localhost", and the port should be 3000, which is the default port for a React application.
+* Backend Installation using a GitHub clone of https://github.com/ghassannasr/perscholas.case-study-backend
+  * Clone the GitHub repository
+  * Run the Java the applicaton throught main entrypoint class as a Maven project. In most IDEs, there will be an option to open the project via the pom.xml files, which is the sound way to open the project.
+  * The only configurable is the @CrossOrigin annotation in both the Author API controller and BlogPost API controller. The @CrossOrigin annotation contains the IP address and port on which the frontend is running. For local installation, the IP should be "localhost", and the port should be 3000, which is the default port for a React application.
 
 ### AWS Remote Installation/Deployment
 * Remote deployment to AWS is detailed above in the deployment GIFs. Here are the steps:
