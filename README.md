@@ -17,10 +17,6 @@
 
 ## Usage and Deployment Overview (GIF Animations)
 
-* **Blog App Sample Usage GIF**
-
-    ![](./README_attachments/BlogAppUsage.gif)
-
 
 * **Spring Boot Project Deployment GIF**
 
